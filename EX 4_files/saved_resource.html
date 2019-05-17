@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://jsfiddle.net/uxqs6e42/11/embedded/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSFiddle</title>
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+      <script src="./highlight.pack.js"></script>
+      <script src="./embed.js"></script>
+      <link rel="stylesheet" media="screen" href="./embed-light.css">
+
+      <script type="text/javascript">
+        var height;
+        var force_height = null;
+        var slug = "uxqs6e42";
+        var show_src = "//fiddle.jshell.net/uxqs6e42/11/show/light/";
+        var resize_element_counter = 0;
+        var shell_edit_url = "/uxqs6e42/11/light/";
+
+      </script>
+
+    <link rel="stylesheet" media="screen" href="./css">
+
+    <style type="text/css" media="screen">
+    </style>
+
+  </head>
+  <body>
+    <div id="wrapper">
+        <header>
+          <h1><a href="https://jsfiddle.net/uxqs6e42/11/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=uxqs6e42" target="_blank">Edit in JSFiddle</a></h1>
+          <div id="actions">
+            <ul class="normalRes">
+                <li class="&quot;active&quot;">
+                  <a data-trigger-type="js" href="https://jsfiddle.net/uxqs6e42/11/embedded/#JavaScript">JavaScript</a>
+                </li>
+                <li>
+                  <a data-trigger-type="html" href="https://jsfiddle.net/uxqs6e42/11/embedded/#HTML">HTML</a>
+                </li>
+                <li>
+                  <a data-trigger-type="css" href="https://jsfiddle.net/uxqs6e42/11/embedded/#CSS">CSS</a>
+                </li>
+                <li>
+                  <a data-trigger-type="result" href="https://jsfiddle.net/uxqs6e42/11/embedded/#Result">Result</a>
+                </li>
+            </ul>
+            <div class="hl" style="left: 0px; width: 87.4574px;"></div>
+          </div>
+        </header>
+
+        <div id="tabs">
+              <pre class="tCont active hljs javascript"><span class="hljs-keyword">new</span> Vue({
+  <span class="hljs-attr">el</span>: <span class="hljs-string">'#exercise'</span>,
+  <span class="hljs-attr">data</span>: {
+  
+  <span class="hljs-attr">colors</span>: {
+  
+   <span class="hljs-attr">highlight</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">shrink</span>: <span class="hljs-literal">true</span>
+    },
+    
+
+    <span class="hljs-attr">user</span>: <span class="hljs-string">''</span>,
+    <span class="hljs-attr">isVisible</span>: <span class="hljs-literal">true</span>,
+    
+    
+    <span class="hljs-attr">myStyle</span>: {
+    
+    <span class="hljs-attr">width</span>: <span class="hljs-string">'90px'</span>,
+      <span class="hljs-attr">height</span>: <span class="hljs-string">'100px'</span>,
+      <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">'gray'</span>
+    },
+    
+    
+    <span class="hljs-attr">progressBar</span>: {
+    <span class="hljs-attr">width</span>: <span class="hljs-string">'0px'</span>,
+      <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">'darkMagenta'</span>
+    }
+  },
+  
+  
+  <span class="hljs-attr">methods</span>: {
+  
+    <span class="hljs-attr">startEffect</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">this</span>;
+      setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      vm.colors.highlight = !vm.colors.highlight;
+        vm.colors.shrink = !vm.colors.shrink;
+      }, <span class="hljs-number">1000</span>);
+    },
+    
+    <span class="hljs-attr">startProgress</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">this</span>;
+      <span class="hljs-keyword">var</span> width = <span class="hljs-number">0</span>;
+     
+    setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      width = width + <span class="hljs-number">10</span>;
+      vm.progressBar.width = width + <span class="hljs-string">'px'</span>;
+      }, <span class="hljs-number">500</span>);
+    }
+  }
+});
+</pre>
+              <pre class="tCont hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://npmcdn.com/vue/dist/vue.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exercise"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below) --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"startEffect"</span>&gt;</span>Start Effect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"effect"</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">"effectClasses"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 2) Create a couple of CSS classes and attach them via the array syntax --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">" ['plum', 'text-color']"</span>&gt;</span>I got no class :(<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 3) Let the user enter a class (create some example classes) and attach it --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"userClass"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">"[{visible: true}, userClass]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"userClass"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"isVisible"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">"[{visible: isVisible}, userClass]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"myStyle.backgroundColor"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">"myStyle"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"startProgress"</span>&gt;</span>Start Progress<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">"['progress-bar']"</span> <span class="hljs-attr">v-bind:style</span>=<span class="hljs-string">"progressBar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+              <pre class="tCont hljs css"> <span class="hljs-selector-id">#effect</span>{
+ <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+}
+
+<span class="hljs-selector-class">.highlight</span> {
+  <span class="hljs-attribute">background-color</span>: lightblue;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span> <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.shrink</span> {
+  <span class="hljs-attribute">background-color</span>: yellow;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span> <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.plum</span> {
+  <span class="hljs-attribute">background-color</span>: plum;
+}
+
+
+<span class="hljs-selector-class">.text-color</span> {
+  <span class="hljs-attribute">color</span>: yellow;
+  <span class="hljs-attribute">font-style</span>: italic;
+}
+
+<span class="hljs-selector-class">.visible</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+}
+
+<span class="hljs-selector-class">.progress-bar</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">3px</span> solid lightblue;
+}</pre>
+              <div class="tCont result " id="result"></div>
+        </div>
+    </div>
+  
+
+</body></html>

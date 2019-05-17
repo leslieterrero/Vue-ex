@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://jsfiddle.net/L6s71ywx/3/embedded/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSFiddle</title>
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+      <script src="./highlight.pack.js"></script>
+      <script src="./embed.js"></script>
+      <link rel="stylesheet" media="screen" href="./embed-light.css">
+
+      <script type="text/javascript">
+        var height;
+        var force_height = null;
+        var slug = "L6s71ywx";
+        var show_src = "//fiddle.jshell.net/L6s71ywx/3/show/light/";
+        var resize_element_counter = 0;
+        var shell_edit_url = "/L6s71ywx/3/light/";
+
+      </script>
+
+    <link rel="stylesheet" media="screen" href="./css">
+
+    <style type="text/css" media="screen">
+    </style>
+
+  </head>
+  <body>
+    <div id="wrapper">
+        <header>
+          <h1><a href="https://jsfiddle.net/L6s71ywx/3/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=L6s71ywx" target="_blank">Edit in JSFiddle</a></h1>
+          <div id="actions">
+            <ul class="normalRes">
+                <li class="&quot;active&quot;">
+                  <a data-trigger-type="js" href="https://jsfiddle.net/L6s71ywx/3/embedded/#JavaScript">JavaScript</a>
+                </li>
+                <li>
+                  <a data-trigger-type="html" href="https://jsfiddle.net/L6s71ywx/3/embedded/#HTML">HTML</a>
+                </li>
+                <li>
+                  <a data-trigger-type="css" href="https://jsfiddle.net/L6s71ywx/3/embedded/#CSS">CSS</a>
+                </li>
+                <li>
+                  <a data-trigger-type="result" href="https://jsfiddle.net/L6s71ywx/3/embedded/#Result">Result</a>
+                </li>
+            </ul>
+            <div class="hl" style="left: 0px; width: 87.4574px;"></div>
+          </div>
+        </header>
+
+        <div id="tabs">
+              <pre class="tCont active hljs coffeescript"><span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">'#exercise'</span>,
+  data: {
+    array: [<span class="hljs-string">'Max'</span>, <span class="hljs-string">'Anna'</span>, <span class="hljs-string">'Chris'</span>, <span class="hljs-string">'Manu'</span>],
+    
+    myObject: {
+      title: <span class="hljs-string">'Lord of the Rings'</span>,
+      author: <span class="hljs-string">'J.R.R. Tolkiens'</span>,
+      books: <span class="hljs-string">'3'</span>
+    },
+    
+    testData: {
+      name: <span class="hljs-string">'TESTOBJECT'</span>, 
+      id: <span class="hljs-number">10</span>,
+      data: [<span class="hljs-number">1.67</span>, <span class="hljs-number">1.33</span>, <span class="hljs-number">0.98</span>, <span class="hljs-number">2.21</span>]
+    },
+    showIt: <span class="hljs-literal">false</span>,
+    show: <span class="hljs-literal">false</span>
+  },
+  
+  methods:{
+   hide(){
+   <span class="hljs-keyword">this</span>.show = !<span class="hljs-keyword">this</span>.show
+   },
+   
+showMe (){
+<span class="hljs-keyword">this</span>.showIt= !<span class="hljs-keyword">this</span>.showIt
+}
+   
+   
+  }
+});
+</pre>
+              <pre class="tCont hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://npmcdn.com/vue/dist/vue.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exercise"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 1) Hook up the button to toggle the display of the two paragraphs. Use both v-if and v-show and inspect the elements to see the difference --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>  @<span class="hljs-attr">click</span>=<span class="hljs-string">"hide"</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"show"</span> &gt;</span>You either see me ...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"!show"</span>&gt;</span>...or me<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>  
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>  @<span class="hljs-attr">click</span>=<span class="hljs-string">"showMe"</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">"showIt"</span>&gt;</span>You either see me ...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">"!showIt"</span>&gt;</span>...or me<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 2) Output an &lt;ul&gt; of array elements of your choice. Also print the index of each element. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"(index , name) in array"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      {{index}} {{name}}
+      
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  
+  <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 3) Print all key-value pairs of the following object: {title: 'Lord of the Rings', author: 'J.R.R. Tolkiens', books: '3'}. Also print the index of each item. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"(value, index) in myObject"</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      {{index}} - {{value}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 4) Print the following object (only the values) and also create a nested loop for the array: {name: 'TESTOBJECT', data: [1.67, 1.33, 0.98, 2.21]} (hint: use v-for and v-if to achieve this) --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"value in testData"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span> 
+    {{value}}
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"d in data"</span>&gt;</span> 
+    {{d}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</pre>
+              <pre class="tCont hljs"></pre>
+              <div class="tCont result " id="result"></div>
+        </div>
+    </div>
+  
+
+</body></html>

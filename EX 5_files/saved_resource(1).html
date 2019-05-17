@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://fiddle.jshell.net/_display/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title></title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./dummy.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    window.onload=function(){
+      
+new Vue({
+  el: '#exercise',
+  data: {
+    array: ['Max', 'Anna', 'Chris', 'Manu'],
+    
+    myObject: {
+      title: 'Lord of the Rings',
+      author: 'J.R.R. Tolkiens',
+      books: '3'
+    },
+    
+    testData: {
+      name: 'TESTOBJECT', 
+      id: 10,
+      data: [1.67, 1.33, 0.98, 2.21]
+    },
+    showIt: false,
+    show: false
+  },
+  
+  methods:{
+   hide(){
+   this.show = !this.show
+   },
+   
+showMe (){
+this.showIt= !this.showIt
+}
+   
+   
+  }
+});
+
+
+    }
+
+</script>
+
+</head>
+<body>
+    <script src="./vue.js"></script>
+
+<div id="exercise"><div><button>Toggle</button> <!----> <p>...or me</p> <hr> <button>Toggle</button> <p style="display: none;">You either see me ...</p> <p>...or me</p></div> <ul><li>
+      Max 0
+      
+    </li></ul><ul><li>
+      Anna 1
+      
+    </li></ul><ul><li>
+      Chris 2
+      
+    </li></ul><ul><li>
+      Manu 3
+      
+    </li></ul> <hr> <ul><li>
+      title - Lord of the Rings
+    </li></ul><ul><li>
+      author - J.R.R. Tolkiens
+    </li></ul><ul><li>
+      books - 3
+    </li></ul> <hr> <ul><li> 
+    TESTOBJECT
+    
+    </li></ul><ul><li> 
+    10
+    
+    </li></ul><ul><li> 
+    [
+  1.67,
+  1.33,
+  0.98,
+  2.21
+]
+    
+    </li></ul></div>
+
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: ""
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+</body></html>

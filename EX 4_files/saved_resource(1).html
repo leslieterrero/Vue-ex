@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://fiddle.jshell.net/_display/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title></title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./dummy.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+       #effect{
+ width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.highlight {
+  background-color: lightblue;
+  width: 200px !important;
+}
+
+.shrink {
+  background-color: yellow;
+  width: 50px !important;
+}
+
+.plum {
+  background-color: plum;
+}
+
+
+.text-color {
+  color: yellow;
+  font-style: italic;
+}
+
+.visible {
+  width: 100px;
+  height: 50px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 20px;
+  border: 3px solid lightblue;
+}
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    window.onload=function(){
+      
+new Vue({
+  el: '#exercise',
+  data: {
+  
+  colors: {
+  
+   highlight: false,
+      shrink: true
+    },
+    
+
+    user: '',
+    isVisible: true,
+    
+    
+    myStyle: {
+    
+    width: '90px',
+      height: '100px',
+      backgroundColor: 'gray'
+    },
+    
+    
+    progressBar: {
+    width: '0px',
+      backgroundColor: 'darkMagenta'
+    }
+  },
+  
+  
+  methods: {
+  
+    startEffect: function() {
+    var vm = this;
+      setInterval(function() {
+      vm.colors.highlight = !vm.colors.highlight;
+        vm.colors.shrink = !vm.colors.shrink;
+      }, 1000);
+    },
+    
+    startProgress: function() {
+    var vm = this;
+      var width = 0;
+     
+    setInterval(function() {
+      width = width + 10;
+      vm.progressBar.width = width + 'px';
+      }, 500);
+    }
+  }
+});
+
+
+    }
+
+</script>
+
+</head>
+<body>
+    <script src="./vue.js"></script>
+<div id="exercise"><div><button>Start Effect</button> <div id="effect"></div></div> <div class="plum text-color">I got no class :(</div> <div><input type="text"> <div class="visible"></div></div> <div><input type="text"> <input type="text"> <div class="visible"></div></div> <div><input type="text"> <div style="width: 90px; height: 100px; background-color: gray;"></div></div> <div><button>Start Progress</button> <div class="progress-bar" style="width: 0px; background-color: darkmagenta;"></div></div></div></body></html>
